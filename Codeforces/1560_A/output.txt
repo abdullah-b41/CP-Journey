@@ -1,4 +1,0 @@
-[Mode: release]
-Sample 1: ACCEPTED
-
-✓  ACCEPTED (1/1 samples)

@@ -1,7 +1,0 @@
-[Mode: run]
-16
-2
-432
-430467210
-
-[Run only — expected output ignored]
