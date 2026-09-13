@@ -14,4 +14,25 @@
 # This rule matches files without dots in their names inside subdirectories
 *
 !*/
-!*.*
+!*.*.DS_Store
+.commandcode/
+.cph/
+.vscode/
+CSES/
+Codeforces/
+Miscellaneous/
+algo-sensei/
+atcoder/
+books/
+code/
+codechef/
+eolymp/
+hackerearth/
+hackerrank/
+kattis/
+lightoj/
+node_modules/
+spoj/
+timus/
+uva/
+vjudge/
