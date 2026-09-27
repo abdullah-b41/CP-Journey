@@ -1,0 +1,9 @@
+{
+  "showUnsupportedFiles": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "notes/patterns",
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "books/"
+  ]
+}

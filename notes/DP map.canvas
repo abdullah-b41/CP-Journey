@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {"id":"a10000000000000a","type":"group","x":-40,"y":-80,"width":1600,"height":820,"label":"Patterns I've used","color":"4"},
+    {"id":"a10000000000000b","type":"group","x":-40,"y":800,"width":2160,"height":300,"label":"Not yet — next to learn","color":"6"},
+    {"id":"b10000000000000a","type":"text","x":-40,"y":-320,"width":760,"height":200,"text":"# DP map\n\nArrows = **builds on**. Green box = patterns you've solved with. Purple = what's next.\n\nDrag in a pattern note from the file list when you learn a new one, and draw the arrow from what it builds on."},
+    {"id":"c10000000000000a","type":"file","x":0,"y":0,"width":400,"height":300,"file":"notes/patterns/Prefix sums.md"},
+    {"id":"c10000000000000b","type":"file","x":0,"y":400,"width":400,"height":300,"file":"notes/patterns/Split recursion.md"},
+    {"id":"c10000000000000c","type":"file","x":560,"y":200,"width":400,"height":300,"file":"notes/patterns/Memo on index.md"},
+    {"id":"c10000000000000d","type":"file","x":1120,"y":0,"width":400,"height":300,"file":"notes/patterns/Take or skip.md"},
+    {"id":"c10000000000000e","type":"file","x":1120,"y":400,"width":400,"height":300,"file":"notes/patterns/Counting ways.md"},
+    {"id":"d10000000000000a","type":"text","x":560,"y":860,"width":400,"height":200,"text":"## Tabulation (bottom-up)\nSame table, filled with a `for` loop instead of recursion.\n\nTry: rewrite Frog 1 without recursion."},
+    {"id":"d10000000000000b","type":"text","x":1120,"y":860,"width":400,"height":200,"text":"## Grid DP\nState = `(row, col)`.\n\nTry: CSES *Grid Paths*."},
+    {"id":"d10000000000000c","type":"text","x":1680,"y":860,"width":400,"height":200,"text":"## Swap the dimension\nWhen `W` is huge, index by value instead.\n\nTry: AtCoder DP *Knapsack 2*."},
+    {"id":"d10000000000000d","type":"text","x":0,"y":860,"width":400,"height":200,"text":"## LIS\nState = \"longest ending at `i`\".\n\nTry: LeetCode 300, then CSES *Increasing Subsequence*."}
+  ],
+  "edges": [
+    {"id":"e10000000000000a","fromNode":"c10000000000000a","fromSide":"right","toNode":"c10000000000000c","toSide":"left","toEnd":"arrow","label":"simplest recurrence"},
+    {"id":"e10000000000000b","fromNode":"c10000000000000b","fromSide":"right","toNode":"c10000000000000c","toSide":"left","toEnd":"arrow","label":"add memo when calls repeat"},
+    {"id":"e10000000000000c","fromNode":"c10000000000000c","fromSide":"right","toNode":"c10000000000000d","toSide":"left","toEnd":"arrow","label":"second dimension"},
+    {"id":"e10000000000000d","fromNode":"c10000000000000c","fromSide":"right","toNode":"c10000000000000e","toSide":"left","toEnd":"arrow","label":"min → sum"},
+    {"id":"e10000000000000e","fromNode":"c10000000000000c","fromSide":"bottom","toNode":"d10000000000000a","toSide":"top","toEnd":"arrow","label":"recursion → loop"},
+    {"id":"e10000000000000f","fromNode":"c10000000000000c","fromSide":"bottom","toNode":"d10000000000000d","toSide":"top","toEnd":"arrow"},
+    {"id":"e100000000000010","fromNode":"c10000000000000d","fromSide":"bottom","toNode":"d10000000000000b","toSide":"top","toEnd":"arrow"},
+    {"id":"e100000000000011","fromNode":"c10000000000000d","fromSide":"right","toNode":"d10000000000000c","toSide":"top","toEnd":"arrow"}
+  ]
+}

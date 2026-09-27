@@ -1,0 +1,43 @@
+filters:
+  and:
+    - file.inFolder("notes/patterns")
+    - 'file.ext == "md"'
+
+formulas:
+  solved_count: 'if(solved, solved.length, 0)'
+  status_icon: 'if(status == "mastered", "🟢", if(status == "comfortable", "🟡", if(status == "unsolved", "⚪", "🔴")))'
+  days_since_edit: '(now() - file.mtime).days'
+
+properties:
+  formula.status_icon:
+    displayName: ""
+  formula.solved_count:
+    displayName: "Solved"
+  formula.days_since_edit:
+    displayName: "Days since edited"
+
+views:
+  - type: table
+    name: "All patterns"
+    groupBy:
+      property: topic
+      direction: ASC
+    order:
+      - formula.status_icon
+      - file.name
+      - status
+      - formula.solved_count
+      - solved
+    summaries:
+      formula.solved_count: Sum
+
+  - type: table
+    name: "Revise next"
+    filters:
+      and:
+        - 'status != "mastered"'
+    order:
+      - formula.status_icon
+      - file.name
+      - status
+      - formula.days_since_edit
